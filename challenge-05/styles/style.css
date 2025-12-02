@@ -98,5 +98,21 @@ img {
 
     & .hero__box {
         width: 40%;
+        overflow: hidden;
+        border-radius: .25rem;
+        align-self: flex-start;
+
+        & img {
+            display: block;
+            border-radius: .5rem;
+            transition: transform .4s ease-in-out;
+            object-fit: cover;
+            
+            &:hover {
+                transform: scale(1.2);
+                border-radius: .5rem;
+            }
+
+        }
     }
 }
