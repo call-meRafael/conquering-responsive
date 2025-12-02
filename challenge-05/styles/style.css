@@ -22,6 +22,7 @@ body {
     place-content: center;
     font-family: 'Roboto', sans-serif;
     min-height: 100dvh;
+    padding-block: 4rem;
 
     
 }
@@ -37,12 +38,19 @@ img {
     
 }
 
+.col {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
 /* ---- utility classes ---- */
 
 
 .hero {
     max-width: 1100px;
     margin-inline: auto;
+    background: var(--bg-clr-primary);
 
     
 }
@@ -50,7 +58,6 @@ img {
 .container {
     display: flex;
     gap: 1rem;
-    background: var(--bg-clr-primary);
     padding-inline: 4rem;
     padding-block: 6rem;
 
@@ -113,6 +120,47 @@ img {
                 border-radius: .5rem;
             }
 
+        }
+    }
+}
+
+.cta {
+    max-width: 1100px;
+    margin-inline: auto;
+
+    & .container {
+
+        & .cta__text {
+            padding: 3rem;
+            & h2 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                color: var(--mid-items-txt-clr);
+            }
+            & p {
+                font-size: 1.313rem;
+                color: #3A3A3A;
+                opacity: .9;
+            }
+        }
+
+        & .cta__features {
+            padding: 3rem;
+            background: var(--bg-clr-secondary);
+            align-items: center;
+            text-align: center;
+
+            & h2 {
+                font-size: 2rem;
+                color: #ffffff;
+            }
+            & p {
+                font-size: 1.313rem;
+                font-weight: 400;
+                line-height: 130%;
+                color: #ffffff;
+                opacity: .8;
+            }
         }
     }
 }
